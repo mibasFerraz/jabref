@@ -33,7 +33,9 @@ public class LowerCaseFormatterTest {
                 Arguments.of("lower", "lower"),
                 Arguments.of("lower", "LOWER"),
                 Arguments.of("lower {UPPER}", "LOWER {UPPER}"),
-                Arguments.of("lower {U}pper", "LOWER {U}PPER")
+                Arguments.of("lower {U}pper", "LOWER {U}PPER"),
+                Arguments.of("*", "*"),
+                Arguments.of("5", "5")
         );
     }
 
@@ -41,4 +43,5 @@ public class LowerCaseFormatterTest {
     public void formatExample() {
         assertEquals("kde {Amarok}", formatter.format(formatter.getExampleInput()));
     }
+
 }
